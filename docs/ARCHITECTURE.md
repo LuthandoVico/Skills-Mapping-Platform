@@ -1,4 +1,4 @@
-1. Purpose
+
 
 ## Purpose
 
@@ -14,33 +14,30 @@ Users
 
 ↓
 
-Frontend
+Frontend (Next.js)
 
 ↓
 
-FastAPI Backend
+FastAPI Backend (python)
+
+
 
 ↓
 
-Business Services
+PostgreSQL (relational db)
+Neo4j (graph db)
+Vector Database (for semantic search and AI)
 
 ↓
 
-PostgreSQL
-Neo4j
-Vector Database
+AI Layer Service (python)
 
 ↓
 
-AI Layer
-
-↓
-
-Forecasting Engine
+Forecasting Engine (python)
 
 
 
-3. Design Principles
 ## Principles
 
 - Modular architecture
@@ -94,148 +91,19 @@ Repositories
 Databases
 
 
-6. Frontend Architecture
-## Backend Architecture
-Explain what each module is responsible for.
--Authentication
-
--Occupations
-
--Users
-
--Experts
-
--Discussion
-
--Forecasting
-
--AI
-
--Administration
-## Database Architecture
-
-PostgreSQL
-
-Stores:
-
-Users
-Roles
-Occupations
-Reviews
-Discussions
-Neo4j
-
-Stores:
-
-Skills
-Relationships
-Career pathways
-Emerging occupations
-
-Explain why each database is used.
-
-## AI Architecture
-User
-
-↓
-
-Backend
-
-↓
-
-AI Service
-
-↓
-
-Llama
-
-↓
-
-Response
-
-and we have to describe where will intergrate AI in our systsem  eg,
-
-Then explain:
-
-Occupation summaries
-Skill recommendations
-Career guidance
-CV analysis (Phase 2)
-Trend explanations
-
-Also clarify that the AI does not modify the database directly.
 
 
-10. Graph Database Architecture
-## Forecasting Architecture
 
-we need to explain how our system forcasting works
 
-Labour Market Data
-
-↓
-
-Skill Extraction
-
-↓
-
-Time Series Models
-
-↓
-
-Predictions
-
-↓
-
-Llama Explanation
-
-Explain that machine learning produces forecasts, while the LLM explains them.
 
 ## Security Architecture
 -JWT authentication
 -Role-based authorization
 -Password hashing
-## Scalability
-Explain how the system can grow. list what you think we can add for it to grow
-##  Deployment
-Explain development, staging, and production.
-
-Developer
-
-↓
-
-GitHub
-
-↓
-
-CI/CD
-
-↓
-
-Server
-
-↓
-
-Database
-
-↓
-
-Users
 
 
-## Future Architecture
 
-Phase 2
-CV uploads
-Job scraping
-Semantic search
-Skill matching
 
-Phase 3
-Forecasting
-Recommendation engine
-Knowledge graph
-AI assistant
 
 ## Architectural Decisions
 | Decision   | Reason                                       |
@@ -247,7 +115,7 @@ AI assistant
 | LangChain  | Structured AI workflows                      |
 | Llama      | Self-hosting flexibility                     |
 
-17. Glossary
+
 
 
 # Skills Mapping Platform Architecture
