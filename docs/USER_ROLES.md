@@ -144,6 +144,25 @@ in-demand skills, and job opportunities)
 ▼
 (loops back to DISCOVERY for new users)
 
+```mermaid
+flowchart TD
+    A[Discovery: user finds/is linked to platform] --> B[View Home Page]
+    B --> C[Onboarding: Select Sector]
+    C --> D[View Sector Page]
+    D --> E[Select Sub-Sector]
+    E --> F[View Sub-Sector Page]
+    F --> G{Browse Occupations or Skills?}
+    G -->|Occupations| H[Select Occupation]
+    G -->|Skills| I[Select Skill]
+    I --> J[Navigate to Related Occupation]
+    H --> K[View Occupation Details]
+    J --> K
+    K --> L[Select Information Tab]
+    L --> M[Continue Exploring or End Session]
+    M --> N[Sharing: user shares platform]
+    N --> A
+```
+
 ### Authentication
 
 - No authentication required — anonymous/unauthenticated access.
