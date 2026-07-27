@@ -143,24 +143,27 @@ in-demand skills, and job opportunities)
 │ restarting the cycle
 ▼
 (loops back to DISCOVERY for new users)
-
 ```mermaid
 flowchart TD
-    A[Discovery: user finds/is linked to platform] --> B[View Home Page]
-    B --> C[Onboarding: Select Sector]
-    C --> D[View Sector Page]
-    D --> E[Select Sub-Sector]
-    E --> F[View Sub-Sector Page]
-    F --> G{Browse Occupations or Skills?}
-    G -->|Occupations| H[Select Occupation]
-    G -->|Skills| I[Select Skill]
-    I --> J[Navigate to Related Occupation]
-    H --> K[View Occupation Details]
-    J --> K
-    K --> L[Select Information Tab]
-    L --> M[Continue Exploring or End Session]
-    M --> N[Sharing: user shares platform]
-    N --> A
+    A[Discovery: user searches for / is linked to platform] --> B[Search for Website]
+    B --> C[View Home Page - browses available sectors]
+    C -->|"curiosity turns into trust once the interface<br/>feels simple and low-commitment"| D[Registration: none needed for General User]
+    D --> E[Onboarding / First Use]
+    E --> F[Select Sector e.g. Manufacturing, IT, Healthcare]
+    F --> G[View Sector Page]
+    G --> H[Select Sub-Sector]
+    H --> I[View Sub-Sector Page]
+    I --> J{Browse Occupations<br/>or Skills?}
+    J -->|Occupations| K[Select Occupation]
+    J -->|Skills| L[Select Skill]
+    L --> M[Navigate to Related Occupation]
+    K --> N[View Occupation Details]
+    M --> N
+    N --> O[Select Information Tab]
+    O --> P[View Information for Selected Tab]
+    P -->|"success and unlocked value motivate<br/>users to invite others"| Q[Continue Exploring or End Session]
+    Q --> R[Sharing: user shares platform to unlock<br/>advanced content, skills, job opportunities]
+    R -->|"shared links become entry<br/>point for new users"| A
 ```
 
 ### Authentication
@@ -342,6 +345,41 @@ Registration ──────► UI/UX designer, database manager, devs
 Onboarding/Use ────► Devs, UI/UX designers, admin ops (approvals)
 Sharing ───────────► UI/UX designers, devs (referral system)
 
+```mermaid
+flowchart TD
+    A[Discovery: General User who has<br/>already browsed the platform] --> B[Views live demo / preview videos /<br/>public skills & occupations taxonomy]
+    B -->|"wants: centralized place to contribute,<br/>collaborate with peers<br/>feels: curious, optimistic, a little overwhelmed"| C[Decides platform is worth<br/>joining as an Expert]
+    C --> D[Click Sign Up]
+    D --> E[View Registration Page<br/>LinkedIn / Google / email / institutional]
+    E --> F[Fill in Details & Click Submit]
+    F --> G{Details Valid?}
+    G -->|No| E
+    G -->|Yes| H[View Verify Email Page →<br/>Click Verify Link → Notification: Verified]
+    H -->|"pain: tedious logins/setup<br/>want: simple, quick login, 1-2 pages max"| I[Log In]
+    I --> J[Fill in Expert Credentials<br/>Google Scholar / ORCID / CV / work email]
+    J --> K[Submit Application →<br/>Routed to Admin for Review]
+    K --> L{Approved?}
+    L -->|No| M[View Update Info Page<br/>edit & resubmit]
+    M --> K
+    L -->|Yes| N[View Dashboard<br/>recent items, discussions, analytics summary]
+    N -->|"pain: waiting too long to be validated<br/>want: approval within a few days;<br/>flag admins if delayed past ~3 days"| O[Click Expert Network Tab →<br/>View All Expert Network Occupations]
+    O --> P[Select an Occupation →<br/>View All Info for That Occupation]
+    P --> Q[Interact via Expert Console /<br/>Annotation View / AI Companion]
+    Q --> R{Leave Feedback<br/>or Just Review?}
+    R -->|Comment/Annotate| S[Submit Feedback on Occupation]
+    R -->|Just Review| T[Move to Next Occupation]
+    S -->|"want: efficient feedback loop, ~20 min<br/>feel: validated, competent, part of something"| U[View For You Page<br/>personalized, trending occupations]
+    T --> U
+    U --> V[Continue Exploring or End Session]
+    V --> W[Regular engagement unlocks:<br/>more features, networking, senior experts]
+    W --> X[Click Share Button]
+    X --> Y{Share directly or<br/>via referral code?}
+    Y -->|Share Link| Z[Platform posted to network/socials]
+    Y -->|Referral Code| AA[New user signs up<br/>under expert's code]
+    Z -->|"want: simple sharing + reward/recognition<br/>e.g. unlocked features, badges"| BB[New Users Enter]
+    AA --> BB
+    BB --> A
+```
 ### Authentication
 
 - Authentication required (email address, password).
@@ -482,6 +520,24 @@ SHARING
 Not applicable — admin accounts are provisioned internally, not
 grown via referral/sharing loops
 
+```mermaid
+flowchart TD
+    A[Discovery: Admin onboarded directly<br/>by the project team, not via public discovery] --> B[Provided with admin credentials /<br/>invited via internal process]
+    B --> C[Receive Admin Invite<br/>email with setup link]
+    C --> D[Set Up Account<br/>password, 2FA setup]
+    D --> E[Log In via Admin Login Page]
+    E --> F[View Admin Dashboard<br/>pending approvals, flagged content,<br/>tickets, system health]
+    F --> G{What needs<br/>attention first?}
+    G -->|Pending Expert Applications| H[Review Credentials →<br/>Approve/Reject]
+    G -->|Flagged Content| I[Review Item →<br/>Approve/Edit/Remove]
+    G -->|User Feedback/Tickets| J[Respond / Escalate / Resolve]
+    G -->|System Operations| K[Check logs / adjust config /<br/>edit core data]
+    H --> L[Take Action →<br/>Action Logged in audit trail]
+    I --> L
+    J --> L
+    K --> L
+    L --> M[Continue Monitoring or End Session]
+```
 
 ### Authentication
 
