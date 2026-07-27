@@ -359,8 +359,8 @@ flowchart TD
     I --> J[Fill in Expert Credentials<br/>Google Scholar / ORCID / CV / work email]
     J --> K[Submit Application →<br/>Routed to Admin for Review]
     K --> L{Approved?}
-    L -->|No| M[View Update Info Page<br/>edit & resubmit]
     M --> K
+    L -->|No| M[View Update Info Page<br/>edit & resubmit]
     L -->|Yes| N[View Dashboard<br/>recent items, discussions, analytics summary]
     N -->|"pain: waiting too long to be validated<br/>want: approval within a few days;<br/>flag admins if delayed past ~3 days"| O[Click Expert Network Tab →<br/>View All Expert Network Occupations]
     O --> P[Select an Occupation →<br/>View All Info for That Occupation]
