@@ -92,7 +92,8 @@ const occupationCategories = [
   { name: "Design Engineers", count: 40 }
 ];
 
-export default function SectorPage({ params }: { params: { id: string } }) {
+export default async function SectorPage({ params }: { params: Promise<{ id: string }> }) {
+  const resolvedParams = await params;
   // We match metals-engineering or fallback
   return (
     <>

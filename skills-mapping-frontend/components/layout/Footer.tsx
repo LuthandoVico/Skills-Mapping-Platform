@@ -43,6 +43,50 @@ export default function Footer() {
             <p className="text-white/30 text-[11px] mt-4 uppercase tracking-[0.5px]">
               v4.2 Editorial Draft
             </p>
+            <div className="mt-8 border-t border-white/10 pt-6">
+              <span className="text-white/30 text-[10px] font-sans font-bold uppercase tracking-[1px] block mb-3">
+                In Partnership With
+              </span>
+              <div className="flex flex-col gap-4">
+                
+                {/* Wits */}
+                <div className="flex items-center gap-3 opacity-75 hover:opacity-100 transition-opacity duration-300">
+                  <div className="bg-white p-1 rounded-md w-12 h-8 flex items-center justify-center overflow-hidden shrink-0 shadow-sm border border-white/10 select-none">
+                    <img 
+                      src="/Wits2.png" 
+                      alt="University of the Witwatersrand" 
+                      className="max-w-full max-h-full object-contain select-none" 
+                    />
+                  </div>
+                  <span className="text-white/70 text-[11.5px] font-sans font-medium leading-none">Wits University</span>
+                </div>
+
+                {/* merSETA */}
+                <div className="flex items-center gap-3 opacity-75 hover:opacity-100 transition-opacity duration-300">
+                  <div className="bg-white p-1 rounded-md w-12 h-8 flex items-center justify-center overflow-hidden shrink-0 shadow-sm border border-white/10 select-none">
+                    <img 
+                      src="/merseta.png" 
+                      alt="merSETA" 
+                      className="max-w-full max-h-full object-contain select-none" 
+                    />
+                  </div>
+                  <span className="text-white/70 text-[11.5px] font-sans font-medium leading-none">merSETA</span>
+                </div>
+
+                {/* REAL */}
+                <div className="flex items-center gap-3 opacity-75 hover:opacity-100 transition-opacity duration-300">
+                  <div className="bg-white p-1 rounded-md w-12 h-8 flex items-center justify-center overflow-hidden shrink-0 shadow-sm border border-white/10 select-none">
+                    <img 
+                      src="/REAL.jpg" 
+                      alt="REAL Centre" 
+                      className="max-w-full max-h-full object-contain select-none" 
+                    />
+                  </div>
+                  <span className="text-white/70 text-[11.5px] font-sans font-medium leading-none">REAL Centre</span>
+                </div>
+
+              </div>
+            </div>
           </div>
 
           {/* Link columns */}

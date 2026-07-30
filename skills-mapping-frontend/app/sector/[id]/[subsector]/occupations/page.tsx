@@ -41,11 +41,12 @@ const occupations = [
   }
 ];
 
-export default function SubsectorOccupationsPage({
+export default async function SubsectorOccupationsPage({
   params
 }: {
-  params: { id: string; subsector: string };
+  params: Promise<{ id: string; subsector: string }>;
 }) {
+  const resolvedParams = await params;
   const subName = "Precision Engineering";
 
   return (
@@ -75,7 +76,7 @@ export default function SubsectorOccupationsPage({
             </div>
 
             <Link
-              href={`/sector/metals-engineering/${params.subsector}/skills`}
+              href={`/sector/metals-engineering/${resolvedParams.subsector}/skills`}
               className="px-4 py-2 bg-white border border-[#e5e7eb] text-[13px] font-semibold rounded-xl text-gray-700 hover:bg-[#f5f7fa] transition-colors shadow-sm text-center"
             >
               Switch to Skills View
