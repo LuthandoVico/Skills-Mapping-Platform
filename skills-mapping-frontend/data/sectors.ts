@@ -9,7 +9,7 @@ export const sectors: Sector[] = [
     annualGrowth: "+8.1%",
     tags: ["Manufacturing", "Fabrication", "Quality"],
     featured: true,
-    icon: "⚙️",
+    icon: "Cog",
   },
   {
     id: "auto-manufacturing",
@@ -19,7 +19,7 @@ export const sectors: Sector[] = [
     annualGrowth: "+14.3%",
     tags: ["Software", "Cloud", "AI"],
     featured: false,
-    icon: "🚗",
+    icon: "Car",
   },
   {
     id: "motor-retail-aftermarket",
@@ -29,7 +29,7 @@ export const sectors: Sector[] = [
     annualGrowth: "+6.8%",
     tags: ["Clinical", "Research", "Pharma"],
     featured: false,
-    icon: "🏪",
+    icon: "Store",
   },
   {
     id: "new-tyre-manufacturing",
@@ -39,7 +39,7 @@ export const sectors: Sector[] = [
     annualGrowth: "+4.2%",
     tags: ["Banking", "Insurance", "FinTech"],
     featured: false,
-    icon: "🛞",
+    icon: "Disc",
   },
   {
     id: "plastics-manufacturing",
@@ -49,7 +49,7 @@ export const sectors: Sector[] = [
     annualGrowth: "+5.9%",
     tags: ["Civil", "Architecture", "Safety"],
     featured: false,
-    icon: "🧪",
+    icon: "FlaskConical",
   },
   {
     id: "auto-components-manufacturing",
@@ -59,6 +59,6 @@ export const sectors: Sector[] = [
     annualGrowth: "+3.1%",
     tags: ["Teaching", "Curriculum", "Assessment"],
     featured: false,
-    icon: "🔩",
+    icon: "Wrench",
   },
 ];
