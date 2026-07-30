@@ -15,7 +15,6 @@ export default function SkillHeader() {
     { label: "Proficiency Framework", path: `/skills/${skillDetail.id}/proficiency` },
     { label: "Skills Analytics", path: `/skills/${skillDetail.id}/analytics` },
     { label: "Skill Status", path: `/skills/${skillDetail.id}/status` },
-    { label: "Competency Roadmap", path: `/skills/${skillDetail.id}/roadmap` },
   ];
 
   return (

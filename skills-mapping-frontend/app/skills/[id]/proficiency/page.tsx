@@ -4,7 +4,8 @@ import SkillHeader from "@/components/shared/SkillHeader";
 import { skillDetail } from "@/data/skills";
 import Link from "next/link";
 
-export default function SkillProficiencyPage({ params }: { params: { id: string } }) {
+export default async function SkillProficiencyPage({ params }: { params: Promise<{ id: string }> }) {
+  const resolvedParams = await params;
   return (
     <>
       <Navbar />
@@ -22,7 +23,7 @@ export default function SkillProficiencyPage({ params }: { params: { id: string 
               <p className="text-[12px] text-[#6b7280] mt-1">Institutional grading scale (Level 1 to Level 5)</p>
             </div>
             <Link
-              href={`/skills/${params.id}/roadmap`}
+              href="/competency-journey"
               className="flex items-center gap-2 px-4 py-2 bg-blue-50 text-blue-800 border border-blue-200 text-[13px] font-bold rounded-xl shadow-sm hover:bg-blue-100 transition-colors"
             >
               <svg className="w-4 h-4 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
