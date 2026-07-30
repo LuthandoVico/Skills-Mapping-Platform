@@ -6,6 +6,6 @@ export interface Sector {
   annualGrowth: string;
   tags: string[];
   featured?: boolean;
-  icon: string; // emoji used as icon
+  icon: string; // Lucide icon name used as icon
   accentColor?: string;
 }

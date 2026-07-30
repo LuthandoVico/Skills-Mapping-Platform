@@ -1,11 +1,23 @@
 import Link from "next/link";
 import { Sector } from "@/types/sector";
+import { Cog, Car, Store, Disc, FlaskConical, Wrench, HelpCircle } from "lucide-react";
 
 interface SectorCardProps {
   sector: Sector;
 }
 
+const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+  Cog,
+  Car,
+  Store,
+  Disc,
+  FlaskConical,
+  Wrench,
+};
+
 export default function SectorCard({ sector }: SectorCardProps) {
+  const IconComponent = iconMap[sector.icon] || HelpCircle;
+
   return (
     <Link
       href={`/sector/${sector.id}`}
@@ -17,8 +29,8 @@ export default function SectorCard({ sector }: SectorCardProps) {
       <div className="flex flex-col flex-1 p-6">
         {/* Icon row + Featured badge */}
         <div className="flex items-start justify-between mb-4">
-          <div className="w-10 h-10 rounded-[14px] bg-[#f5f7fa] flex items-center justify-center text-[22px] select-none">
-            {sector.icon}
+          <div className="w-10 h-10 rounded-[14px] bg-[#f5f7fa] flex items-center justify-center text-[#1d3557] select-none">
+            <IconComponent className="w-5 h-5" />
           </div>
           {sector.featured && (
             <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-[#d4af37] text-[#1d3557] text-[10px] font-semibold uppercase tracking-[0.25px]">
