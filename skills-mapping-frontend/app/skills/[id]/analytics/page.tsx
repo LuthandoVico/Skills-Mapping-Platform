@@ -4,6 +4,7 @@ import { useState } from "react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import SkillHeader from "@/components/shared/SkillHeader";
+import { skillDetail } from "@/data/skills";
 
 interface TooltipState {
   chartId: string;
@@ -83,7 +84,7 @@ export default function SkillAnalyticsPage() {
               Skills Analytics
             </h2>
             <p className="text-[14px] text-[#74777f] mt-1 leading-[21px] font-sans">
-              South African and merSETA-specific labour market analytics for Strategic Leadership
+              South African and merSETA-specific labour market analytics for {skillDetail.name}
             </p>
           </div>
 

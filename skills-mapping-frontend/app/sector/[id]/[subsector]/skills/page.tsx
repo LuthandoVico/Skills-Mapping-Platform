@@ -22,15 +22,15 @@ import {
 // Raw skills data matching the Figma cards and counts
 const skillsData = [
   {
-    id: "strategic-leadership",
-    name: "Strategic Leadership",
-    category: "Leadership & Management",
+    id: "cnc-machining-programming",
+    name: "CNC Machining & Programming",
+    category: "Technical Operations",
     level: "Senior",
-    desc: "The ability to set direction, mobilize resources, and inspire teams to deliver on organizational goals.",
-    employersCount: 42,
-    overlap: "94%",
-    growth: "+12%",
-    tags: ["Management", "Strategy", "Stakeholders"]
+    desc: "Setting up, operating, and programming CNC machines to produce precision metal components to engineering specifications.",
+    employersCount: 78,
+    overlap: "91%",
+    growth: "+18%",
+    tags: ["CNC", "G-Code", "Multi-Axis"]
   },
   {
     id: "precision-machining",

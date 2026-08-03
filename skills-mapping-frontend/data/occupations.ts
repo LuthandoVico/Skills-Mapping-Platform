@@ -27,7 +27,7 @@ export interface OccupationDetail {
   };
   skillsAndKnowledge: {
     knowledge: { name: string; score: string; percent: number }[];
-    hardSkills: { name: string; desc: string; percent: number }[];
+    hardSkills: { name: string; desc: string; percent: number; skillId?: string }[];
     attitudes: string[];
     softSkills: { name: string; score: string; percent: number }[];
   };
@@ -85,10 +85,10 @@ export const occupationDetail: OccupationDetail = {
       { name: "Materials Science", score: "75%", percent: 75 }
     ],
     hardSkills: [
-      { name: "Computer-Aided Design (CAD)", desc: "Expert proficiency in AutoCAD, SolidWorks, and Fusion 360", percent: 92 },
-      { name: "Project Management", desc: "Scheduling, budgeting, and stakeholder coordination", percent: 78 },
+      { name: "Computer-Aided Design (CAD)", desc: "Expert proficiency in AutoCAD, SolidWorks, and Fusion 360", percent: 92, skillId: "technical-drawing-cad" },
+      { name: "CNC Machining & Programming", desc: "Setting up, operating, and programming CNC lathes, mills, and grinders", percent: 88, skillId: "cnc-machining-programming" },
       { name: "Finite Element Analysis", desc: "Structural and thermal simulation using ANSYS and Abaqus", percent: 70 },
-      { name: "Manufacturing Processes", desc: "CNC machining, welding, and additive manufacturing", percent: 80 }
+      { name: "Welding Technology", desc: "MIG, TIG, and arc welding processes for metal fabrication", percent: 80, skillId: "welding-technology" }
     ],
     attitudes: [
       "ANALYTICAL MINDSET",

@@ -2,6 +2,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import OccupationHeader from "@/components/shared/OccupationHeader";
 import { occupationDetail } from "@/data/occupations";
+import Link from "next/link";
 
 export default function OccupationSkillsPage() {
   return (
@@ -32,25 +33,48 @@ export default function OccupationSkillsPage() {
             </div>
           </div>
 
-          {/* Column 2: Hard Skills (Technical) */}
+          {/* Column 2: Hard Skills (Technical) — clickable when linked */}
           <div className="bg-white border border-[#e5e7eb] rounded-2xl p-6 shadow-sm lg:col-span-2">
             <span className="text-[11px] font-bold text-[#6b7280] uppercase tracking-wider block">HARD SKILLS (TECHNICAL)</span>
 
             <div className="flex flex-col gap-6 mt-6">
-              {occupationDetail.skillsAndKnowledge.hardSkills.map((h) => (
-                <div key={h.name} className="flex flex-col gap-1">
-                  <div className="flex justify-between items-center text-[13px] font-semibold">
-                    <span className="text-gray-700">{h.name}</span>
+              {occupationDetail.skillsAndKnowledge.hardSkills.map((h) => {
+                const content = (
+                  <div className="flex flex-col gap-1">
+                    <div className="flex justify-between items-center text-[13px] font-semibold">
+                      <span className={h.skillId ? "text-[#1d3557] group-hover:text-[#2a4a73]" : "text-gray-700"}>
+                        {h.name}
+                      </span>
+                      {h.skillId && (
+                        <svg className="w-4 h-4 text-gray-300 group-hover:text-[#1d3557] transition-colors shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      )}
+                    </div>
+                    <p className="text-[12px] text-[#6b7280]">{h.desc}</p>
+                    <div className="w-full h-1.5 bg-gray-100 rounded-full overflow-hidden mt-1">
+                      <div
+                        className="h-full bg-[#1d3557] rounded-full"
+                        style={{ width: `${h.percent}%` }}
+                      />
+                    </div>
                   </div>
-                  <p className="text-[12px] text-[#6b7280]">{h.desc}</p>
-                  <div className="w-full h-1.5 bg-gray-100 rounded-full overflow-hidden mt-1">
-                    <div
-                      className="h-full bg-[#1d3557] rounded-full"
-                      style={{ width: `${h.percent}%` }}
-                    />
+                );
+
+                return h.skillId ? (
+                  <Link
+                    key={h.name}
+                    href={`/skills/${h.skillId}`}
+                    className="group p-3 -m-3 rounded-xl hover:bg-[#f5f7fa] transition-colors cursor-pointer"
+                  >
+                    {content}
+                  </Link>
+                ) : (
+                  <div key={h.name}>
+                    {content}
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </div>

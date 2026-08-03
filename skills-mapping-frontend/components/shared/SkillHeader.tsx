@@ -65,7 +65,7 @@ export default function SkillHeader() {
         </div>
 
         {/* Highlight KPI metrics in header block */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 mt-8 py-6 border-t border-[#e5e7eb]">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-8 py-6 border-t border-[#e5e7eb]">
           <div>
             <span className="text-[20px] font-bold text-black block leading-[25px]">
               {skillDetail.stats.employersHiring}
@@ -89,12 +89,6 @@ export default function SkillHeader() {
               {skillDetail.stats.timeToProficiency}
             </span>
             <span className="text-[12px] text-[#6b7280] block mt-0.5">Avg. time to proficiency</span>
-          </div>
-          <div>
-            <span className="text-[20px] font-bold text-[#d4af37] block leading-[25px]">
-              {skillDetail.stats.salaryPremium}
-            </span>
-            <span className="text-[12px] text-[#6b7280] block mt-0.5">Salary premium</span>
           </div>
         </div>
 

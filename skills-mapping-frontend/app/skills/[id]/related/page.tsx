@@ -8,21 +8,21 @@ import { skillDetail } from "@/data/skills";
 import Link from "next/link";
 
 // Custom SVG Components for the Icons
-const ActiveListeningIcon = () => (
+const WeldingIcon = () => (
   <div className="relative w-5 h-5 shrink-0 select-none">
-    {/* Bulb body */}
+    {/* Welding torch body */}
     <div className="absolute" style={{ bottom: "25%", left: "20.83%", right: "20.83%", top: "8.33%" }}>
       <svg className="w-full h-full" viewBox="0 0 11.6667 13.3333" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M5.83333 0C2.60833 0 0 2.60833 0 5.83333C0 7.81667 0.991667 9.55833 2.5 10.6167V12.5C2.5 12.9583 2.875 13.3333 3.33333 13.3333H8.33333C8.79167 13.3333 9.16667 12.9583 9.16667 12.5V10.6167C10.675 9.55833 11.6667 7.81667 11.6667 5.83333C11.6667 2.60833 9.05833 0 5.83333 0Z" fill="#D4AF37" fillOpacity="0.9"/>
       </svg>
     </div>
-    {/* Bulb middle base */}
+    {/* Torch base */}
     <div className="absolute" style={{ bottom: "16.67%", left: "37.5%", right: "37.5%", top: "75%" }}>
       <svg className="w-full h-full" viewBox="0 0 5 1.66667" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M4.16667 0H0.833333C0.373096 0 0 0.373096 0 0.833333C0 1.29357 0.373096 1.66667 0.833333 1.66667H4.16667C4.6269 1.66667 5 1.29357 5 0.833333C5 0.373096 4.6269 0 4.16667 0Z" fill="#D4AF37" fillOpacity="0.7"/>
       </svg>
     </div>
-    {/* Bulb bottom base */}
+    {/* Torch tip */}
     <div className="absolute" style={{ bottom: "10.42%", left: "41.67%", right: "41.67%", top: "83.33%" }}>
       <svg className="w-full h-full" viewBox="0 0 3.33333 1.25" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M2.70833 0H0.625C0.279822 0 0 0.279822 0 0.625C0 0.970178 0.279822 1.25 0.625 1.25H2.70833C3.05351 1.25 3.33333 0.970178 3.33333 0.625C3.33333 0.279822 3.05351 0 2.70833 0Z" fill="#D4AF37" fillOpacity="0.5"/>
@@ -31,7 +31,7 @@ const ActiveListeningIcon = () => (
   </div>
 );
 
-const NegotiationIcon = () => (
+const HydraulicsIcon = () => (
   <div className="relative w-5 h-5 shrink-0 select-none">
     {/* Top left circle */}
     <div className="absolute" style={{ top: "12.5%", left: "12.5%", right: "58.33%", bottom: "58.33%" }}>
@@ -60,7 +60,7 @@ const NegotiationIcon = () => (
   </div>
 );
 
-const TeamworkIcon = () => (
+const CADIcon = () => (
   <div className="relative w-5 h-5 shrink-0 select-none">
     {/* Top left dot */}
     <div className="absolute" style={{ bottom: "58.33%", left: "25%", right: "50%", top: "16.67%" }}>
@@ -111,7 +111,7 @@ export default function RelatedSkillsPage() {
                   Skill Overlap &amp; Interconnectivity
                 </h3>
                 <p className="font-normal text-[#1d3557]/70 text-[12px] leading-[18px] mt-[4px]">
-                  Mapping shared competencies across the leadership domain.
+                  Mapping shared competencies across the metals manufacturing domain.
                 </p>
               </div>
               <div className="mt-[4px] shrink-0">
@@ -123,10 +123,10 @@ export default function RelatedSkillsPage() {
             <div className="w-full flex items-center justify-center py-[20px] pb-[16px] h-[236px] my-auto">
               <div className="h-[217px] relative w-[303px] select-none">
                 
-                {/* Strategic Leadership Circle */}
+                {/* CNC Machining Circle */}
                 <div
                   className={`absolute transition-all duration-300 ease-in-out cursor-pointer origin-center ${
-                    hoveredSkillId === "strategic-leadership" ? "scale-[1.06] z-20 filter drop-shadow-md" : "scale-100 z-10"
+                    hoveredSkillId === "cnc-machining-programming" ? "scale-[1.06] z-20 filter drop-shadow-md" : "scale-100 z-10"
                   }`}
                   style={{
                     top: "7.5%",
@@ -134,18 +134,18 @@ export default function RelatedSkillsPage() {
                     bottom: "27.5%",
                     left: "26.79%",
                   }}
-                  onMouseEnter={() => setHoveredSkillId("strategic-leadership")}
+                  onMouseEnter={() => setHoveredSkillId("cnc-machining-programming")}
                   onMouseLeave={() => setHoveredSkillId(null)}
                 >
                   <svg width="100%" height="100%" viewBox="0 0 140.679 141.05" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M70.3393 141.05C109.187 141.05 140.679 109.475 140.679 70.525C140.679 31.5751 109.187 0 70.3393 0C31.492 0 0 31.5751 0 70.525C0 109.475 31.492 141.05 70.3393 141.05Z" fill="#1D3557" fillOpacity={hoveredSkillId === "strategic-leadership" ? "0.9" : "0.8"}/>
+                    <path d="M70.3393 141.05C109.187 141.05 140.679 109.475 140.679 70.525C140.679 31.5751 109.187 0 70.3393 0C31.492 0 0 31.5751 0 70.525C0 109.475 31.492 141.05 70.3393 141.05Z" fill="#1D3557" fillOpacity={hoveredSkillId === "cnc-machining-programming" ? "0.9" : "0.8"}/>
                   </svg>
                 </div>
 
-                {/* Active Listening Circle */}
+                {/* Welding Technology Circle */}
                 <div
                   className={`absolute transition-all duration-300 ease-in-out cursor-pointer origin-center ${
-                    hoveredSkillId === "active-listening" ? "scale-[1.06] z-20 filter drop-shadow-md" : "scale-100 z-0"
+                    hoveredSkillId === "welding-technology" ? "scale-[1.06] z-20 filter drop-shadow-md" : "scale-100 z-0"
                   }`}
                   style={{
                     top: "46%",
@@ -153,18 +153,18 @@ export default function RelatedSkillsPage() {
                     bottom: "-2%",
                     left: "12.14%",
                   }}
-                  onMouseEnter={() => setHoveredSkillId("active-listening")}
+                  onMouseEnter={() => setHoveredSkillId("welding-technology")}
                   onMouseLeave={() => setHoveredSkillId(null)}
                 >
                   <svg width="100%" height="100%" viewBox="0 0 121.2 121.52" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M60.6 121.52C94.0685 121.52 121.2 94.3168 121.2 60.76C121.2 27.2032 94.0685 0 60.6 0C27.1315 0 0 27.2032 0 60.76C0 94.3168 27.1315 121.52 60.6 121.52Z" fill="#D4AF37" fillOpacity={hoveredSkillId === "active-listening" ? "0.85" : "0.75"}/>
+                    <path d="M60.6 121.52C94.0685 121.52 121.2 94.3168 121.2 60.76C121.2 27.2032 94.0685 0 60.6 0C27.1315 0 0 27.2032 0 60.76C0 94.3168 27.1315 121.52 60.6 121.52Z" fill="#D4AF37" fillOpacity={hoveredSkillId === "welding-technology" ? "0.85" : "0.75"}/>
                   </svg>
                 </div>
 
-                {/* Teamwork Circle */}
+                {/* Technical Drawing & CAD Circle */}
                 <div
                   className={`absolute transition-all duration-300 ease-in-out cursor-pointer origin-center ${
-                    hoveredSkillId === "teamwork" ? "scale-[1.06] z-20 filter drop-shadow-md" : "scale-100 z-0"
+                    hoveredSkillId === "technical-drawing-cad" ? "scale-[1.06] z-20 filter drop-shadow-md" : "scale-100 z-0"
                   }`}
                   style={{
                     top: "46%",
@@ -172,18 +172,18 @@ export default function RelatedSkillsPage() {
                     bottom: "-2%",
                     left: "47.86%",
                   }}
-                  onMouseEnter={() => setHoveredSkillId("teamwork")}
+                  onMouseEnter={() => setHoveredSkillId("technical-drawing-cad")}
                   onMouseLeave={() => setHoveredSkillId(null)}
                 >
                   <svg width="100%" height="100%" viewBox="0 0 121.2 121.52" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M60.6 121.52C94.0685 121.52 121.2 94.3168 121.2 60.76C121.2 27.2032 94.0685 0 60.6 0C27.1315 0 0 27.2032 0 60.76C0 94.3168 27.1315 121.52 60.6 121.52Z" fill="#1D3557" fillOpacity={hoveredSkillId === "teamwork" ? "0.65" : "0.55"}/>
+                    <path d="M60.6 121.52C94.0685 121.52 121.2 94.3168 121.2 60.76C121.2 27.2032 94.0685 0 60.6 0C27.1315 0 0 27.2032 0 60.76C0 94.3168 27.1315 121.52 60.6 121.52Z" fill="#1D3557" fillOpacity={hoveredSkillId === "technical-drawing-cad" ? "0.65" : "0.55"}/>
                   </svg>
                 </div>
 
-                {/* Strategic Leadership text */}
+                {/* CNC Machining text */}
                 <div
                   className={`absolute flex flex-col justify-center items-center pointer-events-none transition-all duration-300 ${
-                    hoveredSkillId === "strategic-leadership" ? "scale-[1.06] z-30" : "scale-100 z-10"
+                    hoveredSkillId === "cnc-machining-programming" ? "scale-[1.06] z-30" : "scale-100 z-10"
                   }`}
                   style={{
                     top: "32.25%",
@@ -192,13 +192,13 @@ export default function RelatedSkillsPage() {
                     bottom: "62.75%",
                   }}
                 >
-                  <p className="font-bold text-[8.5px] text-white leading-tight uppercase text-center tracking-wider">
-                    Strategic
+                  <p className="font-bold text-[7.5px] text-white leading-tight uppercase text-center tracking-wider">
+                    CNC Machining
                   </p>
                 </div>
                 <div
                   className={`absolute flex flex-col justify-center items-center pointer-events-none transition-all duration-300 ${
-                    hoveredSkillId === "strategic-leadership" ? "scale-[1.06] z-30" : "scale-100 z-10"
+                    hoveredSkillId === "cnc-machining-programming" ? "scale-[1.06] z-30" : "scale-100 z-10"
                   }`}
                   style={{
                     top: "38.25%",
@@ -207,15 +207,15 @@ export default function RelatedSkillsPage() {
                     bottom: "56.75%",
                   }}
                 >
-                  <p className="font-bold text-[8.5px] text-white leading-tight uppercase text-center tracking-wider">
-                    Leadership
+                  <p className="font-bold text-[7.5px] text-white leading-tight uppercase text-center tracking-wider">
+                    & Programming
                   </p>
                 </div>
 
-                {/* Active Listening text */}
+                {/* Welding Technology text */}
                 <div
                   className={`absolute flex items-center justify-center pointer-events-none transition-all duration-300 ${
-                    hoveredSkillId === "active-listening" ? "scale-[1.06] z-30 font-extrabold" : "scale-100 z-10"
+                    hoveredSkillId === "welding-technology" ? "scale-[1.06] z-30 font-extrabold" : "scale-100 z-10"
                   }`}
                   style={{
                     top: "76.04%",
@@ -225,14 +225,14 @@ export default function RelatedSkillsPage() {
                   }}
                 >
                   <p className="font-bold text-[8px] text-white leading-tight uppercase text-center tracking-wider">
-                    Active Listening
+                    Welding Technology
                   </p>
                 </div>
 
-                {/* Teamwork text */}
+                {/* Technical Drawing & CAD text */}
                 <div
                   className={`absolute flex items-center justify-center pointer-events-none transition-all duration-300 ${
-                    hoveredSkillId === "teamwork" ? "scale-[1.06] z-30 font-extrabold" : "scale-100 z-10"
+                    hoveredSkillId === "technical-drawing-cad" ? "scale-[1.06] z-30 font-extrabold" : "scale-100 z-10"
                   }`}
                   style={{
                     top: "76%",
@@ -241,8 +241,8 @@ export default function RelatedSkillsPage() {
                     bottom: "19%",
                   }}
                 >
-                  <p className="font-bold text-[8px] text-white leading-tight uppercase text-center tracking-wider">
-                    Teamwork
+                  <p className="font-bold text-[7px] text-white leading-tight uppercase text-center tracking-wider">
+                    Technical Drawing
                   </p>
                 </div>
 
@@ -276,11 +276,11 @@ export default function RelatedSkillsPage() {
 
             {/* Skill cards list */}
             {skillDetail.relatedSkills.map((skill) => {
-              let IconComponent = ActiveListeningIcon;
-              if (skill.id === "negotiation") {
-                IconComponent = NegotiationIcon;
-              } else if (skill.id === "teamwork") {
-                IconComponent = TeamworkIcon;
+              let IconComponent = WeldingIcon;
+              if (skill.id === "hydraulic-systems") {
+                IconComponent = HydraulicsIcon;
+              } else if (skill.id === "technical-drawing-cad") {
+                IconComponent = CADIcon;
               }
 
               const isHighlighted = hoveredSkillId === skill.id;
