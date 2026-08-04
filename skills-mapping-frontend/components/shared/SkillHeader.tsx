@@ -50,17 +50,15 @@ export default function SkillHeader() {
 
           {/* Edit Buttons */}
           <div className="flex items-center gap-2 flex-shrink-0 self-start md:self-auto">
-            <button className="p-2 rounded-xl border border-[#e5e7eb] hover:bg-gray-55 transition-colors">
-              <svg className="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            <Link
+              href={`/skills/${skillDetail.id}/annotate`}
+              className="flex items-center gap-2 px-4 py-2.5 bg-yellow-50 text-yellow-800 border border-yellow-200 text-[13px] font-bold uppercase tracking-wider rounded-xl shadow-sm transition-all hover:bg-yellow-100 hover:shadow-md"
+            >
+              <svg className="w-4 h-4 text-yellow-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
               </svg>
-            </button>
-            <button className="flex items-center gap-2 px-4 py-2 bg-[#1d3557] hover:bg-[#2a4a73] text-white text-[13px] font-semibold rounded-xl shadow-sm transition-colors">
-              Edit Page
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-              </svg>
-            </button>
+              Annotate
+            </Link>
           </div>
         </div>
 

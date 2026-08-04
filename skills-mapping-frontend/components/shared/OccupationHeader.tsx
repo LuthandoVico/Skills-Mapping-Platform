@@ -58,15 +58,17 @@ export default function OccupationHeader() {
             </div>
           </div>
 
-          {/* Edit mode / Review Mode badge */}
+          {/* Annotate / Review Mode button — links to the annotate page */}
           <div className="flex-shrink-0 self-start md:self-auto">
-            <button className="flex items-center gap-2 px-4 py-2.5 bg-yellow-50 text-yellow-800 border border-yellow-200 text-[12px] font-bold uppercase tracking-wider rounded-xl shadow-sm transition-all hover:bg-yellow-100">
+            <Link
+              href={`/occupations/${occupationDetail.id}/annotate`}
+              className="flex items-center gap-2 px-4 py-2.5 bg-yellow-50 text-yellow-800 border border-yellow-200 text-[12px] font-bold uppercase tracking-wider rounded-xl shadow-sm transition-all hover:bg-yellow-100 hover:shadow-md"
+            >
               <svg className="w-4 h-4 text-yellow-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
               </svg>
-              Review Mode
-            </button>
+              Annotate
+            </Link>
           </div>
         </div>
 
