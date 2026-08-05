@@ -148,13 +148,15 @@ export default function RegisterPage() {
                 </div>
                 <h3 className="text-2xl font-bold text-[#181c20]">Account Created Successfully!</h3>
                 <p className="text-[#44474e] mt-3 max-w-md">
-                  Thank you for registering. If you signed up as an Expert, your credentials will go through our verification system. You can now access the portal.
+                  {selectedRole.id === "administrator" 
+                    ? "Welcome, Administrator. Your profile is configured. You can now proceed to the Admin Dashboard to manage the platform and user applications."
+                    : "Thank you for registering. If you signed up as an Expert, your credentials will go through our verification system. You can now access the portal."}
                 </p>
                 <Link 
-                  href="/login" 
-                  className="mt-8 px-8 py-3 bg-[#1d3557] hover:bg-[#2a4a73] text-white font-medium rounded-xl shadow-md transition-all"
+                  href={selectedRole.id === "administrator" ? "/admin/dashboard" : "/login"} 
+                  className="mt-8 px-8 py-3 bg-[#1d3557] hover:bg-[#2a4a73] text-white font-medium rounded-xl shadow-md transition-all animate-pulse"
                 >
-                  Proceed to Sign In
+                  {selectedRole.id === "administrator" ? "Go to Admin Dashboard" : "Proceed to Sign In"}
                 </Link>
               </div>
             ) : (
