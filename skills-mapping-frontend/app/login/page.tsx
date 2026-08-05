@@ -2,9 +2,11 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { Mail, Lock, Eye, EyeOff, ShieldAlert, ArrowRight, Check } from "lucide-react";
 
 export default function LoginPage() {
+  const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [rememberDevice, setRememberDevice] = useState(false);
@@ -29,6 +31,16 @@ export default function LoginPage() {
     setTimeout(() => {
       setIsSubmitting(false);
       setLoginSuccess(true);
+      
+      // Redirect after showing success screen briefly
+      setTimeout(() => {
+        const lowerEmail = email.toLowerCase();
+        if (lowerEmail.includes("expert") || lowerEmail === "h.thorne@nla.gov") {
+          router.push("/expert/validation");
+        } else {
+          router.push("/");
+        }
+      }, 1500);
     }, 1200);
   };
 
