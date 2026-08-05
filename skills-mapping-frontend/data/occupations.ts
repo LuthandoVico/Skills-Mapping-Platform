@@ -42,6 +42,13 @@ export interface OccupationDetail {
     topCities: { city: string; share: string }[];
     postingsTrend: { year: string; count: number }[];
   };
+  aiRecommendations: {
+    id: string;
+    type: "missing_skill" | "update_education" | "outdated_skill" | "update_market" | "add_task";
+    title: string;
+    reason: string;
+    confidence: number;
+  }[];
 }
 
 export const occupationDetail: OccupationDetail = {
@@ -134,5 +141,42 @@ export const occupationDetail: OccupationDetail = {
       { year: "2022", count: 1020 },
       { year: "2023", count: 1248 }
     ]
-  }
+  },
+  aiRecommendations: [
+    {
+      id: "1",
+      type: "missing_skill",
+      title: "Add: Additive Manufacturing (3D Printing)",
+      reason: "Emerging skill appearing in 72% of recent job postings for mechanical engineers.",
+      confidence: 0.87,
+    },
+    {
+      id: "2",
+      type: "update_education",
+      title: "Update: Include NQF Level 7 requirement",
+      reason: "ECSA registration now requires NQF Level 7 minimum qualification.",
+      confidence: 0.92,
+    },
+    {
+      id: "3",
+      type: "outdated_skill",
+      title: "Review: Manual Drafting relevance",
+      reason: "Declining relevance — 95% of firms now use CAD exclusively.",
+      confidence: 0.78,
+    },
+    {
+      id: "4",
+      type: "update_market",
+      title: "Update: Salary range outdated",
+      reason: "2024 salary surveys indicate R 500k–R 1M range for mid-career professionals.",
+      confidence: 0.83,
+    },
+    {
+      id: "5",
+      type: "add_task",
+      title: "Add: Sustainability & green engineering compliance",
+      reason: "New EPA and SANS regulations require sustainability assessments in 60% of engineering projects.",
+      confidence: 0.74,
+    },
+  ],
 };
